@@ -65,4 +65,9 @@ function terbilang(num) {
   }
 }
 
-module.exports = terbilang;
+if( typeof exports !== 'undefined' ) {
+    if( typeof module !== 'undefined' && module.exports ) {
+      exports = module.exports = terbilang
+    }
+    exports.terbilang = terbilang
+  } 
